@@ -5,24 +5,26 @@
  */
 package view;
 
+import controller.ControllerBoard;
+
 /**
  *
  * @author Ramon
  */
 public class ViewBoard {
     
-    private String [][] board = {{"X", "O", "O"},
-                                 {"X", "X", "O"},
-                                 {"O", "X", "O"}};
+    private String [][] board;
+    
+    ControllerBoard cb = new ControllerBoard();
 
     public String [][] ViewBoard() {
 
-        
         return board;
         
     }
 
     public String[][] getBoard() {
+        this.board = cb.getBoard();
         return board;
     }
 

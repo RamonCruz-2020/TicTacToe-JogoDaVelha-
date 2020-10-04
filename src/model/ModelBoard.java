@@ -14,9 +14,9 @@ public class ModelBoard {
     private int[][] board;
     private int currentPlayer;
     
-    public void ModelBoard(int x, int y){
+    public ModelBoard(int sizeBoard){
         
-        board = new int [x][y];
+        this.board = new int [sizeBoard][sizeBoard];
         
     }
 
