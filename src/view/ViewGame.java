@@ -5,6 +5,8 @@
  */
 package view;
 
+import controller.ControllerBoard;
+
 /**
  *
  * @author Ramon
@@ -39,12 +41,19 @@ public class ViewGame extends javax.swing.JFrame {
         board0 = new javax.swing.JButton();
         board1 = new javax.swing.JButton();
         board2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TicTacToe");
         setAlwaysOnTop(true);
         setBackground(new java.awt.Color(255, 255, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setIconImages(null);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -151,6 +160,24 @@ public class ViewGame extends javax.swing.JFrame {
                             .addComponent(board8, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
 
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel1.setText("Player");
+
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel2.setText("Player");
+
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel3.setText("1");
+
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel4.setText("2");
+
+        jLabel5.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
+        jLabel5.setText("X");
+
+        jLabel6.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
+        jLabel6.setText("O");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -162,13 +189,38 @@ public class ViewGame extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(445, Short.MAX_VALUE))
+                .addGap(120, 120, 120)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3))
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel4))
+                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(83, 83, 83))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(65, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel5))))
                 .addGap(18, 18, 18)
                 .addComponent(test0)
                 .addContainerGap())
@@ -245,6 +297,12 @@ public class ViewGame extends javax.swing.JFrame {
     private javax.swing.JButton board6;
     private javax.swing.JButton board7;
     private javax.swing.JButton board8;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton test0;
@@ -252,17 +310,19 @@ public class ViewGame extends javax.swing.JFrame {
 
     public final void board(){
         
-        ViewBoard bd = new ViewBoard();
+        ControllerBoard cb = new ControllerBoard();
         
-        board0.setText(bd.getBoard()[0][0]);
-        board1.setText(bd.getBoard()[0][1]);
-        board2.setText(bd.getBoard()[0][2]);
-        board3.setText(bd.getBoard()[1][0]);
-        board4.setText(bd.getBoard()[1][1]);
-        board5.setText(bd.getBoard()[1][2]);
-        board6.setText(bd.getBoard()[2][0]);
-        board7.setText(bd.getBoard()[2][1]);
-        board8.setText(bd.getBoard()[2][2]);
+        cb.convert();
+        
+        board0.setText(cb.getBoard()[0][0]);
+        board1.setText(cb.getBoard()[0][1]);
+        board2.setText(cb.getBoard()[0][2]);
+        board3.setText(cb.getBoard()[1][0]);
+        board4.setText(cb.getBoard()[1][1]);
+        board5.setText(cb.getBoard()[1][2]);
+        board6.setText(cb.getBoard()[2][0]);
+        board7.setText(cb.getBoard()[2][1]);
+        board8.setText(cb.getBoard()[2][2]);
         
         
     }    

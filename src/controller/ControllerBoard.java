@@ -25,21 +25,27 @@ public class ControllerBoard {
     }
     
     public int getSizeBoard() {
+        
         return sizeBoard;
+        
     }
 
     public void setSizeBoard(int sizeBoard) {
+        
         this.sizeBoard = sizeBoard;
+        
     }
 
     public String[][] getBoard() {
         
-        convert();
         return board;
+    
     }
 
     public void setBoard(String[][] board) {
+        
         this.board = board;
+        
     }
     
     
