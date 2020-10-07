@@ -21,19 +21,35 @@ public class ModelBoard {
     }
 
     public int[][] getBoard() {
+        
         return board;
     }
 
     public void setBoard(int[][] board) {
+        
         this.board = board;
+        
     }
 
     public int getCurrentPlayer() {
+        
         return currentPlayer;
     }
 
     public void setCurrentPlayer(int currentPlayer) {
+        
         this.currentPlayer = currentPlayer;
+        
+    }
+    
+    public void setCell(int x, int y, int a){
+        
+        if(this.board [x][y] == 0){
+            
+            this.board [x][y] = a;
+            
+        }
+        
     }
     
     

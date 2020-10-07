@@ -15,6 +15,7 @@ public class ControllerBoard {
     
     private int sizeBoard = 3;
     private String [][] board ;
+    private String Cell;
     
     ModelBoard mb = new ModelBoard(sizeBoard);
 
@@ -47,9 +48,22 @@ public class ControllerBoard {
         this.board = board;
         
     }
+
+    public String getCell() {
+        
+        return Cell;
+        
+    }
+
+    public void setCell(String Cell) {
+        
+        this.Cell = Cell;
+        
+    }
     
     
-    public void convert(){
+    
+    public void convertForward(){
         
         for(int i = 0; i<=2; ++i){
             for(int j = 0; j<=2; j++){
@@ -61,21 +75,40 @@ public class ControllerBoard {
                         this.board[i][j] = "X";
                         break;
                     case -1:
-                        this.board[1][j] = "O";
+                        this.board[i][j] = "O";
                         break;
                     case 0:
-                        this.board[i][j] = " ";
+                        this.board[i][j] = "";
                         break;
                     default:
-                        System.out.println("erro ao converte");
+                        System.out.println("erro ao converte forw");
                     
                 }
                 
-                System.out.println(mb.getBoard()[i][j] + " " + i);
+                System.out.println(mb.getBoard()[i][j] + " : " + i + "," + j);
             
             }
         
         }
     
     }
+    
+    public void convetBackward(int x, int y, String a){
+        
+           
+        switch(a){
+                    
+            case "X":
+                mb.setCell(x, y, 1);
+                break;
+            case "O":
+                mb.setCell(x, y, -1);
+                break;
+            default:
+            System.out.println("erro ao converte back");
+                        
+        }
+        
+    }
+    
 }

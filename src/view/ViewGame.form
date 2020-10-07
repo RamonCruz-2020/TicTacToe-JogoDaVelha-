@@ -195,6 +195,9 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="borderPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="board6ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="board8">
               <Properties>
@@ -207,6 +210,9 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="borderPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="board8ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="board7">
               <Properties>
@@ -219,6 +225,9 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="borderPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="board7ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="board5">
               <Properties>
@@ -231,6 +240,9 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="borderPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="board5ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="board4">
               <Properties>
@@ -243,6 +255,9 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="borderPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="board4ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="board3">
               <Properties>
@@ -255,6 +270,9 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="borderPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="board3ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="board0">
               <Properties>
@@ -267,6 +285,9 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="borderPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="board0ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="board1">
               <Properties>
@@ -294,6 +315,9 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="borderPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="board2ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

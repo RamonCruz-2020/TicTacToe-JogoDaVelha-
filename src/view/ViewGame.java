@@ -12,6 +12,8 @@ import controller.ControllerBoard;
  * @author Ramon
  */
 public class ViewGame extends javax.swing.JFrame {
+    
+    ControllerBoard cb = new ControllerBoard();
 
     /**
      * Creates new form ViewGame
@@ -70,36 +72,71 @@ public class ViewGame extends javax.swing.JFrame {
         board6.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board6.setToolTipText("");
         board6.setBorderPainted(false);
+        board6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                board6ActionPerformed(evt);
+            }
+        });
 
         board8.setBackground(new java.awt.Color(255, 255, 255));
         board8.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board8.setToolTipText("");
         board8.setBorderPainted(false);
+        board8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                board8ActionPerformed(evt);
+            }
+        });
 
         board7.setBackground(new java.awt.Color(255, 255, 255));
         board7.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board7.setToolTipText("");
         board7.setBorderPainted(false);
+        board7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                board7ActionPerformed(evt);
+            }
+        });
 
         board5.setBackground(new java.awt.Color(255, 255, 255));
         board5.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board5.setToolTipText("");
         board5.setBorderPainted(false);
+        board5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                board5ActionPerformed(evt);
+            }
+        });
 
         board4.setBackground(new java.awt.Color(255, 255, 255));
         board4.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board4.setToolTipText("");
         board4.setBorderPainted(false);
+        board4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                board4ActionPerformed(evt);
+            }
+        });
 
         board3.setBackground(new java.awt.Color(255, 255, 255));
         board3.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board3.setToolTipText("");
         board3.setBorderPainted(false);
+        board3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                board3ActionPerformed(evt);
+            }
+        });
 
         board0.setBackground(new java.awt.Color(255, 255, 255));
         board0.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board0.setToolTipText("");
         board0.setBorderPainted(false);
+        board0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                board0ActionPerformed(evt);
+            }
+        });
 
         board1.setBackground(new java.awt.Color(255, 255, 255));
         board1.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
@@ -115,6 +152,11 @@ public class ViewGame extends javax.swing.JFrame {
         board2.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board2.setToolTipText("");
         board2.setBorderPainted(false);
+        board2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                board2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -241,14 +283,65 @@ public class ViewGame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void board1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board1ActionPerformed
-        // TODO add your handling code here:
+
+        cell(0,1,"O");
+        
     }//GEN-LAST:event_board1ActionPerformed
 
     private void test0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test0ActionPerformed
         // TODO add your handling code here:
         board();
         
+        
     }//GEN-LAST:event_test0ActionPerformed
+
+    private void board0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board0ActionPerformed
+       
+        cell(0,0,"X");
+        
+    }//GEN-LAST:event_board0ActionPerformed
+
+    private void board2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board2ActionPerformed
+
+        cell(0,2,"O");
+        
+    }//GEN-LAST:event_board2ActionPerformed
+
+    private void board3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board3ActionPerformed
+
+        cell(1,0,"X");
+        
+    }//GEN-LAST:event_board3ActionPerformed
+
+    private void board4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board4ActionPerformed
+
+        cell(1,1,"O");
+        
+    }//GEN-LAST:event_board4ActionPerformed
+
+    private void board5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board5ActionPerformed
+
+        cell(1,2,"X");
+        
+    }//GEN-LAST:event_board5ActionPerformed
+
+    private void board6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board6ActionPerformed
+
+        cell(2,0,"O");
+        
+    }//GEN-LAST:event_board6ActionPerformed
+
+    private void board7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board7ActionPerformed
+
+        cell(2,1,"X");
+        
+    }//GEN-LAST:event_board7ActionPerformed
+
+    private void board8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board8ActionPerformed
+
+        cell(2,2,"O");
+        
+    }//GEN-LAST:event_board8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -310,9 +403,7 @@ public class ViewGame extends javax.swing.JFrame {
 
     public final void board(){
         
-        ControllerBoard cb = new ControllerBoard();
-        
-        cb.convert();
+        cb.convertForward();
         
         board0.setText(cb.getBoard()[0][0]);
         board1.setText(cb.getBoard()[0][1]);
@@ -325,5 +416,13 @@ public class ViewGame extends javax.swing.JFrame {
         board8.setText(cb.getBoard()[2][2]);
         
         
-    }    
+    }
+
+    public void cell(int x, int y, String a){
+        
+        cb.convetBackward(x, y, a);
+        board();
+        
+    }
+    
 }
