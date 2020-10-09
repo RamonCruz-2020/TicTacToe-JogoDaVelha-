@@ -72,6 +72,7 @@ public class ViewGame extends javax.swing.JFrame {
         board6.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board6.setToolTipText("");
         board6.setBorderPainted(false);
+        board6.setFocusPainted(false);
         board6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 board6ActionPerformed(evt);
@@ -82,6 +83,7 @@ public class ViewGame extends javax.swing.JFrame {
         board8.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board8.setToolTipText("");
         board8.setBorderPainted(false);
+        board8.setFocusPainted(false);
         board8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 board8ActionPerformed(evt);
@@ -92,6 +94,7 @@ public class ViewGame extends javax.swing.JFrame {
         board7.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board7.setToolTipText("");
         board7.setBorderPainted(false);
+        board7.setFocusPainted(false);
         board7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 board7ActionPerformed(evt);
@@ -102,6 +105,7 @@ public class ViewGame extends javax.swing.JFrame {
         board5.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board5.setToolTipText("");
         board5.setBorderPainted(false);
+        board5.setFocusPainted(false);
         board5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 board5ActionPerformed(evt);
@@ -112,6 +116,7 @@ public class ViewGame extends javax.swing.JFrame {
         board4.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board4.setToolTipText("");
         board4.setBorderPainted(false);
+        board4.setFocusPainted(false);
         board4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 board4ActionPerformed(evt);
@@ -122,6 +127,7 @@ public class ViewGame extends javax.swing.JFrame {
         board3.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board3.setToolTipText("");
         board3.setBorderPainted(false);
+        board3.setFocusPainted(false);
         board3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 board3ActionPerformed(evt);
@@ -132,6 +138,7 @@ public class ViewGame extends javax.swing.JFrame {
         board0.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board0.setToolTipText("");
         board0.setBorderPainted(false);
+        board0.setFocusPainted(false);
         board0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 board0ActionPerformed(evt);
@@ -142,6 +149,7 @@ public class ViewGame extends javax.swing.JFrame {
         board1.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board1.setToolTipText("");
         board1.setBorderPainted(false);
+        board1.setFocusPainted(false);
         board1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 board1ActionPerformed(evt);
@@ -152,6 +160,7 @@ public class ViewGame extends javax.swing.JFrame {
         board2.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board2.setToolTipText("");
         board2.setBorderPainted(false);
+        board2.setFocusPainted(false);
         board2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 board2ActionPerformed(evt);

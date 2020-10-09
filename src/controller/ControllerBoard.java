@@ -19,46 +19,32 @@ public class ControllerBoard {
     
     ModelBoard mb = new ModelBoard(sizeBoard);
 
-    public ControllerBoard() {
-        
-        this.board = new String [sizeBoard][sizeBoard];
-        
+    public ControllerBoard() {        
+        this.board = new String [sizeBoard][sizeBoard];       
     }
     
-    public int getSizeBoard() {
-        
-        return sizeBoard;
-        
+    public int getSizeBoard() {      
+        return sizeBoard;        
     }
 
-    public void setSizeBoard(int sizeBoard) {
-        
-        this.sizeBoard = sizeBoard;
-        
+    public void setSizeBoard(int sizeBoard) {        
+        this.sizeBoard = sizeBoard;        
     }
 
-    public String[][] getBoard() {
-        
-        return board;
-    
+    public String[][] getBoard() {        
+        return board;    
     }
 
-    public void setBoard(String[][] board) {
-        
-        this.board = board;
-        
+    public void setBoard(String[][] board) {        
+        this.board = board;        
     }
 
-    public String getCell() {
-        
-        return Cell;
-        
+    public String getCell() {        
+        return Cell;        
     }
 
-    public void setCell(String Cell) {
-        
-        this.Cell = Cell;
-        
+    public void setCell(String Cell) {        
+        this.Cell = Cell;        
     }
     
     

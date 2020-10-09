@@ -14,32 +14,24 @@ public class ModelBoard {
     private int[][] board;
     private int currentPlayer;
     
-    public ModelBoard(int sizeBoard){
-        
-        this.board = new int [sizeBoard][sizeBoard];
-        
+    public ModelBoard(int sizeBoard){        
+        this.board = new int [sizeBoard][sizeBoard];        
     }
 
-    public int[][] getBoard() {
-        
+    public int[][] getBoard() {        
         return board;
     }
 
     public void setBoard(int[][] board) {
-        
-        this.board = board;
-        
+        this.board = board;        
     }
 
-    public int getCurrentPlayer() {
-        
+    public int getCurrentPlayer() {    
         return currentPlayer;
     }
 
-    public void setCurrentPlayer(int currentPlayer) {
-        
-        this.currentPlayer = currentPlayer;
-        
+    public void setCurrentPlayer(int currentPlayer) {     
+        this.currentPlayer = currentPlayer;        
     }
     
     public void setCell(int x, int y, int a){
