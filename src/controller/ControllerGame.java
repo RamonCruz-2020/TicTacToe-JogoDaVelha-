@@ -6,21 +6,26 @@
 package controller;
 
 import model.ModelBoard;
+import model.ModelPlayer;
+import model.ModelTurn;
 
 /**
  *
  * @author Ramon
  */
-public class ControllerBoard {
+public class ControllerGame {
     
     private int sizeBoard = 3;
     private String [][] board ;
-    private String Cell;
     
     ModelBoard mb = new ModelBoard(sizeBoard);
+    ModelPlayer p1 = new ModelPlayer(1,1);
+    ModelPlayer p2 = new ModelPlayer(2,-1);
+    ModelTurn turn = new ModelTurn(p1,p2);
 
-    public ControllerBoard() {        
-        this.board = new String [sizeBoard][sizeBoard];       
+    public ControllerGame() {        
+        this.board = new String [sizeBoard][sizeBoard];
+        
     }
     
     public int getSizeBoard() {      
@@ -38,17 +43,7 @@ public class ControllerBoard {
     public void setBoard(String[][] board) {        
         this.board = board;        
     }
-
-    public String getCell() {        
-        return Cell;        
-    }
-
-    public void setCell(String Cell) {        
-        this.Cell = Cell;        
-    }
-    
-    
-    
+   
     public void convertForward(){
         
         for(int i = 0; i<=2; ++i){
@@ -79,21 +74,20 @@ public class ControllerBoard {
     
     }
     
-    public void convetBackward(int x, int y, String a){
+    public void setCell(int x, int y){
         
-           
-        switch(a){
-                    
-            case "X":
-                mb.setCell(x, y, 1);
-                break;
-            case "O":
-                mb.setCell(x, y, -1);
-                break;
-            default:
-            System.out.println("erro ao converte back");
-                        
-        }
+        this.mb.setCell(x, y, this.turn.getCurrentPlayer().getToken());
+        
+    }
+    
+    public void setNextTurn(){
+        
+        this.turn.Turn();
+        
+    }
+    public int getPlayerTurn(){
+        
+        return this.turn.getCurrentPlayer().getId();
         
     }
     

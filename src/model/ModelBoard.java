@@ -12,7 +12,6 @@ package model;
 public class ModelBoard {
     
     private int[][] board;
-    private int currentPlayer;
     
     public ModelBoard(int sizeBoard){        
         this.board = new int [sizeBoard][sizeBoard];        
@@ -24,14 +23,6 @@ public class ModelBoard {
 
     public void setBoard(int[][] board) {
         this.board = board;        
-    }
-
-    public int getCurrentPlayer() {    
-        return currentPlayer;
-    }
-
-    public void setCurrentPlayer(int currentPlayer) {     
-        this.currentPlayer = currentPlayer;        
     }
     
     public void setCell(int x, int y, int a){

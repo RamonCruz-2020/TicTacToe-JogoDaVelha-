@@ -5,7 +5,8 @@
  */
 package view;
 
-import controller.ControllerBoard;
+import controller.ControllerGame;
+import java.awt.Color;
 
 /**
  *
@@ -13,7 +14,7 @@ import controller.ControllerBoard;
  */
 public class ViewGame extends javax.swing.JFrame {
     
-    ControllerBoard cb = new ControllerBoard();
+    ControllerGame cg = new ControllerGame();
 
     /**
      * Creates new form ViewGame
@@ -43,12 +44,14 @@ public class ViewGame extends javax.swing.JFrame {
         board0 = new javax.swing.JButton();
         board1 = new javax.swing.JButton();
         board2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        p1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        p2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TicTacToe");
@@ -211,23 +214,64 @@ public class ViewGame extends javax.swing.JFrame {
                             .addComponent(board8, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel1.setText("Player");
-
-        jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel2.setText("Player");
-
-        jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel3.setText("1");
-
-        jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel4.setText("2");
-
         jLabel5.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         jLabel5.setText("X");
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         jLabel6.setText("O");
+
+        p1.setBackground(java.awt.Color.yellow);
+
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel1.setText("Player");
+
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel3.setText("1");
+
+        javax.swing.GroupLayout p1Layout = new javax.swing.GroupLayout(p1);
+        p1.setLayout(p1Layout);
+        p1Layout.setHorizontalGroup(
+            p1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        p1Layout.setVerticalGroup(
+            p1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jLabel1)
+                .addComponent(jLabel3))
+        );
+
+        p2.setBackground(new java.awt.Color(255, 255, 255));
+        p2.setPreferredSize(new java.awt.Dimension(87, 44));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel2.setText("Player");
+
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel4.setText("2");
+
+        javax.swing.GroupLayout p2Layout = new javax.swing.GroupLayout(p2);
+        p2.setLayout(p2Layout);
+        p2Layout.setHorizontalGroup(
+            p2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        p2Layout.setVerticalGroup(
+            p2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jLabel2)
+                .addComponent(jLabel4))
+        );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -240,21 +284,17 @@ public class ViewGame extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(120, 120, 120)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3))
-                    .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                .addGap(109, 109, 109)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel4))
-                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(83, 83, 83))
+                    .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel5)))
+                .addGap(84, 84, 84)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(p2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(83, 159, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,15 +303,13 @@ public class ViewGame extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(p2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel5))))
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6))))
                 .addGap(18, 18, 18)
                 .addComponent(test0)
                 .addContainerGap())
@@ -293,7 +331,7 @@ public class ViewGame extends javax.swing.JFrame {
 
     private void board1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board1ActionPerformed
 
-        cell(0,1,"O");
+        cell(0,1);
         
     }//GEN-LAST:event_board1ActionPerformed
 
@@ -306,50 +344,50 @@ public class ViewGame extends javax.swing.JFrame {
 
     private void board0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board0ActionPerformed
        
-        cell(0,0,"X");
+        cell(0,0);
         
     }//GEN-LAST:event_board0ActionPerformed
 
     private void board2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board2ActionPerformed
 
-        cell(0,2,"O");
+        cell(0,2);
         
     }//GEN-LAST:event_board2ActionPerformed
 
     private void board3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board3ActionPerformed
 
-        cell(1,0,"X");
+        cell(1,0);
         
     }//GEN-LAST:event_board3ActionPerformed
 
     private void board4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board4ActionPerformed
 
-        cell(1,1,"O");
+        cell(1,1);
         
     }//GEN-LAST:event_board4ActionPerformed
 
     private void board5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board5ActionPerformed
 
-        cell(1,2,"X");
+        cell(1,2);
         
     }//GEN-LAST:event_board5ActionPerformed
 
     private void board6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board6ActionPerformed
 
-        cell(2,0,"O");
+        cell(2,0);
         
     }//GEN-LAST:event_board6ActionPerformed
 
     private void board7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board7ActionPerformed
 
-        cell(2,1,"X");
+        cell(2,1);
         
     }//GEN-LAST:event_board7ActionPerformed
 
     private void board8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board8ActionPerformed
 
-        cell(2,2,"O");
-        
+        cell(2,2);
+       
     }//GEN-LAST:event_board8ActionPerformed
 
     /**
@@ -381,10 +419,8 @@ public class ViewGame extends javax.swing.JFrame {
         //</editor-fold>
         
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ViewGame().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new ViewGame().setVisible(true);
         });
     }
     
@@ -407,29 +443,49 @@ public class ViewGame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel p1;
+    private javax.swing.JPanel p2;
     private javax.swing.JButton test0;
     // End of variables declaration//GEN-END:variables
 
     public final void board(){
         
-        cb.convertForward();
+        cg.convertForward();
         
-        board0.setText(cb.getBoard()[0][0]);
-        board1.setText(cb.getBoard()[0][1]);
-        board2.setText(cb.getBoard()[0][2]);
-        board3.setText(cb.getBoard()[1][0]);
-        board4.setText(cb.getBoard()[1][1]);
-        board5.setText(cb.getBoard()[1][2]);
-        board6.setText(cb.getBoard()[2][0]);
-        board7.setText(cb.getBoard()[2][1]);
-        board8.setText(cb.getBoard()[2][2]);
+        board0.setText(cg.getBoard()[0][0]);
+        board1.setText(cg.getBoard()[0][1]);
+        board2.setText(cg.getBoard()[0][2]);
+        board3.setText(cg.getBoard()[1][0]);
+        board4.setText(cg.getBoard()[1][1]);
+        board5.setText(cg.getBoard()[1][2]);
+        board6.setText(cg.getBoard()[2][0]);
+        board7.setText(cg.getBoard()[2][1]);
+        board8.setText(cg.getBoard()[2][2]);
         
         
     }
-
-    public void cell(int x, int y, String a){
+    
+    public void selectTurnPlayer(){
         
-        cb.convetBackward(x, y, a);
+        if(cg.getPlayerTurn() == 1){
+            
+            p1.setBackground(Color.YELLOW);
+            p2.setBackground(Color.WHITE);
+            
+        }else{
+            
+            p2.setBackground(Color.YELLOW);
+            p1.setBackground(Color.WHITE);
+            
+        }
+        
+    }
+
+    public void cell(int x, int y){
+        
+        cg.setCell(x, y);
+        cg.setNextTurn();
+        selectTurnPlayer();
         board();
         
     }
