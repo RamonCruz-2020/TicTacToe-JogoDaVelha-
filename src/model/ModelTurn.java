@@ -44,19 +44,20 @@ public class ModelTurn {
     public void setCurrentPlayer(ModelPlayer currentPlayer) {
         this.currentPlayer = currentPlayer;
     }
-    
+ 
     public void Turn (){
     
-        if(this.currentPlayer == this.player1){
-            
-            this.currentPlayer = this.player2;
-            
-        }else{
-            
-            this.currentPlayer = this.player1;
+       
+            if(this.currentPlayer == this.player1){
+
+                this.currentPlayer = this.player2;
+
+            }else{
+
+                this.currentPlayer = this.player1;
             
         }
-        
+            
     }
     
 }

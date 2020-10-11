@@ -465,27 +465,26 @@ public class ViewGame extends javax.swing.JFrame {
         
     }
     
-    public void selectTurnPlayer(){
+    public void selectTurnPlayer(int x, int y){
         
-        if(cg.getPlayerTurn() == 1){
+        if(cg.getPlayerTurn() == 2 && cg.emptyCell(x, y)){
             
             p1.setBackground(Color.YELLOW);
             p2.setBackground(Color.WHITE);
             
-        }else{
+        }if(cg.getPlayerTurn() == 1 && cg.emptyCell(x, y)){
             
             p2.setBackground(Color.YELLOW);
             p1.setBackground(Color.WHITE);
             
         }
-        
+       
     }
 
     public void cell(int x, int y){
         
+        selectTurnPlayer(x, y);
         cg.setCell(x, y);
-        cg.setNextTurn();
-        selectTurnPlayer();
         board();
         
     }

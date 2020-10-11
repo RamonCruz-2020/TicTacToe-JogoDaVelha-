@@ -15,25 +15,18 @@ import model.ModelTurn;
  */
 public class ControllerGame {
     
-    private int sizeBoard = 3;
+    private final int SIZEBOARD = 3;
     private String [][] board ;
     
-    ModelBoard mb = new ModelBoard(sizeBoard);
-    ModelPlayer p1 = new ModelPlayer(1,1);
-    ModelPlayer p2 = new ModelPlayer(2,-1);
-    ModelTurn turn = new ModelTurn(p1,p2);
+        ModelPlayer p1 = new ModelPlayer(1,1);
+        ModelPlayer p2 = new ModelPlayer(2,-1);
+        ModelTurn turn = new ModelTurn(p1, p2);
+        ModelBoard mb = new ModelBoard(SIZEBOARD, turn);
 
-    public ControllerGame() {        
-        this.board = new String [sizeBoard][sizeBoard];
+    public ControllerGame() { 
         
-    }
-    
-    public int getSizeBoard() {      
-        return sizeBoard;        
-    }
-
-    public void setSizeBoard(int sizeBoard) {        
-        this.sizeBoard = sizeBoard;        
+        this.board = new String [SIZEBOARD][SIZEBOARD];
+        
     }
 
     public String[][] getBoard() {        
@@ -80,11 +73,12 @@ public class ControllerGame {
         
     }
     
-    public void setNextTurn(){
+    public boolean emptyCell(int x, int y){
         
-        this.turn.Turn();
+        return this.mb.emptyCell(x, y);
         
     }
+    
     public int getPlayerTurn(){
         
         return this.turn.getCurrentPlayer().getId();
