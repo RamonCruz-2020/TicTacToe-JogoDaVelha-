@@ -17,6 +17,7 @@ public class ControllerGame {
     
     private final int SIZEBOARD = 3;
     private String [][] board ;
+    private int [] sb;
     
         ModelPlayer p1 = new ModelPlayer(1,1);
         ModelPlayer p2 = new ModelPlayer(2,-1);
@@ -26,6 +27,7 @@ public class ControllerGame {
     public ControllerGame() { 
         
         this.board = new String [SIZEBOARD][SIZEBOARD];
+        this.sb = new int [2];
         
     }
 
@@ -36,7 +38,16 @@ public class ControllerGame {
     public void setBoard(String[][] board) {        
         this.board = board;        
     }
+
+    public int[] getSb() {
+        return sb;
+    }
+
+    public void setSb(int[] sb) {
+        this.sb = sb;
+    }
    
+    
     public void convertForward(){
         
         for(int i = 0; i<=2; ++i){
@@ -59,7 +70,7 @@ public class ControllerGame {
                     
                 }
                 
-                System.out.println(mb.getBoard()[i][j] + " : " + i + "," + j);
+                //System.out.println(mb.getBoard()[i][j] + " : " + i + "," + j);
             
             }
         
@@ -73,15 +84,15 @@ public class ControllerGame {
         
     }
     
-    public boolean emptyCell(int x, int y){
-        
-        return this.mb.emptyCell(x, y);
-        
-    }
-    
     public int getPlayerTurn(){
         
         return this.turn.getCurrentPlayer().getId();
+        
+    }
+    
+    public void scoreBoard(){
+        
+        this.sb = new int [] {p1.getWin(),p2.getWin()};
         
     }
     

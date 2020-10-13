@@ -52,6 +52,9 @@ public class ViewGame extends javax.swing.JFrame {
         p2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        winP2 = new javax.swing.JLabel();
+        winP1 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TicTacToe");
@@ -273,47 +276,80 @@ public class ViewGame extends javax.swing.JFrame {
                 .addComponent(jLabel4))
         );
 
+        winP2.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        winP2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        winP2.setText("0");
+        winP2.setToolTipText("");
+        winP2.setFocusable(false);
+
+        winP1.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        winP1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        winP1.setText("0");
+        winP1.setToolTipText("");
+        winP1.setFocusable(false);
+
+        jLabel7.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabel7.setText("X");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(test0)
-                .addGap(22, 22, 22))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(109, 109, 109)
+                .addGap(113, 113, 113)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabel5)))
-                .addGap(84, 84, 84)
+                .addGap(73, 73, 73)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(p2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addGap(83, 159, Short.MAX_VALUE))
+                .addContainerGap(166, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(test0)
+                        .addGap(22, 22, 22))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(winP1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(58, 58, 58)
+                        .addComponent(jLabel7)
+                        .addGap(45, 45, 45)
+                        .addComponent(winP2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(196, 196, 196))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(65, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(winP1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(winP2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(test0))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(p2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(19, 19, 19)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
                             .addComponent(jLabel6))))
-                .addGap(18, 18, 18)
-                .addComponent(test0)
                 .addContainerGap())
         );
+
+        winP2.getAccessibleContext().setAccessibleName("0");
+        winP1.getAccessibleContext().setAccessibleName("0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -331,62 +367,62 @@ public class ViewGame extends javax.swing.JFrame {
 
     private void board1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board1ActionPerformed
 
-        cell(0,1);
+        board(0,1);
         
     }//GEN-LAST:event_board1ActionPerformed
 
     private void test0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test0ActionPerformed
         // TODO add your handling code here:
-        board();
+   
         
         
     }//GEN-LAST:event_test0ActionPerformed
 
     private void board0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board0ActionPerformed
        
-        cell(0,0);
+        board(0,0);
         
     }//GEN-LAST:event_board0ActionPerformed
 
     private void board2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board2ActionPerformed
 
-        cell(0,2);
+        board(0,2);
         
     }//GEN-LAST:event_board2ActionPerformed
 
     private void board3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board3ActionPerformed
 
-        cell(1,0);
+        board(1,0);
         
     }//GEN-LAST:event_board3ActionPerformed
 
     private void board4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board4ActionPerformed
 
-        cell(1,1);
+        board(1,1);
         
     }//GEN-LAST:event_board4ActionPerformed
 
     private void board5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board5ActionPerformed
 
-        cell(1,2);
+        board(1,2);
         
     }//GEN-LAST:event_board5ActionPerformed
 
     private void board6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board6ActionPerformed
 
-        cell(2,0);
+        board(2,0);
         
     }//GEN-LAST:event_board6ActionPerformed
 
     private void board7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board7ActionPerformed
 
-        cell(2,1);
+        board(2,1);
         
     }//GEN-LAST:event_board7ActionPerformed
 
     private void board8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board8ActionPerformed
 
-        cell(2,2);
+        board(2,2);
        
     }//GEN-LAST:event_board8ActionPerformed
 
@@ -441,15 +477,20 @@ public class ViewGame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel p1;
     private javax.swing.JPanel p2;
     private javax.swing.JButton test0;
+    private javax.swing.JLabel winP1;
+    private javax.swing.JLabel winP2;
     // End of variables declaration//GEN-END:variables
 
-    public final void board(){
-        
+    public final void board(int x, int y){
+
+        cg.setCell(x, y);  
+        selectTurnPlayer(x, y);
         cg.convertForward();
         
         board0.setText(cg.getBoard()[0][0]);
@@ -462,31 +503,26 @@ public class ViewGame extends javax.swing.JFrame {
         board7.setText(cg.getBoard()[2][1]);
         board8.setText(cg.getBoard()[2][2]);
         
+        cg.scoreBoard();
         
+        winP1.setText(Integer.toString(cg.getSb()[0]));
+        winP2.setText(Integer.toString(cg.getSb()[1]));
     }
     
     public void selectTurnPlayer(int x, int y){
         
-        if(cg.getPlayerTurn() == 2 && cg.emptyCell(x, y)){
+        if(cg.getPlayerTurn() == 1){
             
             p1.setBackground(Color.YELLOW);
             p2.setBackground(Color.WHITE);
             
-        }if(cg.getPlayerTurn() == 1 && cg.emptyCell(x, y)){
+        }if(cg.getPlayerTurn() == 2){
             
             p2.setBackground(Color.YELLOW);
             p1.setBackground(Color.WHITE);
             
         }
        
-    }
-
-    public void cell(int x, int y){
-        
-        selectTurnPlayer(x, y);
-        cg.setCell(x, y);
-        board();
-        
     }
     
 }

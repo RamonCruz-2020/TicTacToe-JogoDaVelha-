@@ -12,13 +12,15 @@ package model;
 public class ModelBoard {
     
     private int[][] board;
+    private int pt;
+    private int step;
     
-    private ModelTurn turn;
+    private final ModelTurn turn;
     
     public ModelBoard(int sizeBoard, ModelTurn turn){
         
         this.board = new int [sizeBoard][sizeBoard];
-        this.turn = turn;
+        this.turn = turn; 
     }
 
     public int[][] getBoard() {        
@@ -40,15 +42,91 @@ public class ModelBoard {
         if(this.board [x][y] == 0){
             
             this.board [x][y] = a;
+            this.scoreSystem(); 
             this.turn.Turn();
             
         }
         
     }
     
-    public boolean emptyCell(int x, int y){
+    private void scoreSystem (){
         
-        return this.board [x][y] == 0;
+        for(int i = 0; i<=2; ++i){
+            
+            for(int j = 0; j<=2; j++){
+            
+                this.pt = this.pt + this.board[i][j];
+                
+            }
+        
+            this.winSystem();
+            
+        }
+        
+        for(int i = 0; i<=2; ++i){
+            
+            for(int j = 0; j<=2; j++){
+            
+                this.pt = this.pt + this.board[j][i];
+                
+            }
+        
+            this.winSystem();
+
+        }
+        
+        for(int i = 0; i<=2; ++i){
+            
+            this.pt = this.pt + this.board[i][i];
+            
+            
+        }
+        
+        this.winSystem();
+        
+        for(int i = 0; i<=2; ++i){
+            
+            this.pt = this.pt + this.board[i][2-i];
+            
+            
+        } 
+        
+        this.winSystem();
+        
+        for(int i = 0; i<=2; ++i){
+            
+            for(int j = 0; j<=2; j++){
+            
+                if(this.board[i][j] != 0){
+                    
+                    this.step = this.step + 1;
+                    
+                }
+                
+            }
+            
+        }
+        this.winSystem();
+    }
+    
+    private void winSystem(){
+        
+        if(this.pt == 3 || this.pt == -3){
+            
+            this.turn.getCurrentPlayer().setWin(this.turn.getCurrentPlayer().getWin() + 1);
+            this.board = new int [this.board.length][this.board.length];
+
+        }
+        
+        if(this.step == 9){
+            
+            this.board = new int [this.board.length][this.board.length];
+            
+        }
+        
+        //System.out.println(pt);
+        this.step = 0;
+        this.pt = 0;
         
     }
     
