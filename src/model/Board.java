@@ -9,15 +9,15 @@ package model;
  *
  * @author Ramon
  */
-public class ModelBoard {
+public class Board {
     
     private int[][] board;
     private int pt;
     private int step;
     
-    private final ModelTurn turn;
+    private final Turn turn;
     
-    public ModelBoard(int sizeBoard, ModelTurn turn){
+    public Board(int sizeBoard, Turn turn){
         
         this.board = new int [sizeBoard][sizeBoard];
         this.turn = turn; 
@@ -37,11 +37,11 @@ public class ModelBoard {
         
     }
     
-    public void setCell(int x, int y, int a){
+    public void setCell(int x, int y){
         
         if(this.board [x][y] == 0){
             
-            this.board [x][y] = a;
+            this.board [x][y] = this.turn.getCurrentPlayer().getToken();
             this.scoreSystem(); 
             this.turn.Turn();
             
@@ -51,9 +51,9 @@ public class ModelBoard {
     
     private void scoreSystem (){
         
-        for(int i = 0; i<=2; ++i){
+        for(int i = 0; i < this.board.length; ++i){
             
-            for(int j = 0; j<=2; j++){
+            for(int j = 0; j < this.board.length; j++){
             
                 this.pt = this.pt + this.board[i][j];
                 
@@ -63,9 +63,9 @@ public class ModelBoard {
             
         }
         
-        for(int i = 0; i<=2; ++i){
+        for(int i = 0; i < this.board.length; ++i){
             
-            for(int j = 0; j<=2; j++){
+            for(int j = 0; j < this.board.length; j++){
             
                 this.pt = this.pt + this.board[j][i];
                 
@@ -75,7 +75,7 @@ public class ModelBoard {
 
         }
         
-        for(int i = 0; i<=2; ++i){
+        for(int i = 0; i < this.board.length; ++i){
             
             this.pt = this.pt + this.board[i][i];
             
@@ -84,7 +84,7 @@ public class ModelBoard {
         
         this.winSystem();
         
-        for(int i = 0; i<=2; ++i){
+        for(int i = 0; i < this.board.length; ++i){
             
             this.pt = this.pt + this.board[i][2-i];
             
@@ -93,9 +93,9 @@ public class ModelBoard {
         
         this.winSystem();
         
-        for(int i = 0; i<=2; ++i){
+        for(int i = 0; i < this.board.length; ++i){
             
-            for(int j = 0; j<=2; j++){
+            for(int j = 0; j < this.board.length; j++){
             
                 if(this.board[i][j] != 0){
                     
@@ -124,7 +124,6 @@ public class ModelBoard {
             
         }
         
-        //System.out.println(pt);
         this.step = 0;
         this.pt = 0;
         

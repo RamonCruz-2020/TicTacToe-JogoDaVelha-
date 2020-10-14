@@ -5,9 +5,9 @@
  */
 package controller;
 
-import model.ModelBoard;
-import model.ModelPlayer;
-import model.ModelTurn;
+import model.Board;
+import model.Player;
+import model.Turn;
 
 /**
  *
@@ -16,71 +16,51 @@ import model.ModelTurn;
 public class ControllerGame {
     
     private final int SIZEBOARD = 3;
-    private String [][] board ;
-    private int [] sb;
     
-        ModelPlayer p1 = new ModelPlayer(1,1);
-        ModelPlayer p2 = new ModelPlayer(2,-1);
-        ModelTurn turn = new ModelTurn(p1, p2);
-        ModelBoard mb = new ModelBoard(SIZEBOARD, turn);
+    Player p1 = new Player(1,1);
+    Player p2 = new Player(2,-1);
+    Turn turn = new Turn(p1, p2);
+    Board mb = new Board(SIZEBOARD, turn);
 
     public ControllerGame() { 
         
-        this.board = new String [SIZEBOARD][SIZEBOARD];
-        this.sb = new int [2];
-        
     }
-
-    public String[][] getBoard() {        
-        return board;    
-    }
-
-    public void setBoard(String[][] board) {        
-        this.board = board;        
-    }
-
-    public int[] getSb() {
-        return sb;
-    }
-
-    public void setSb(int[] sb) {
-        this.sb = sb;
-    }
-   
     
-    public void convertForward(){
+    public String[][] convertForward(){
         
-        for(int i = 0; i<=2; ++i){
-            for(int j = 0; j<=2; j++){
+        String [][] board = new String [SIZEBOARD][SIZEBOARD];
+        
+        for(int i = 0; i < board.length; ++i){
+            for(int j = 0; j < board.length; j++){
             
                 
                 switch(mb.getBoard()[i][j]){
                     
                     case 1:
-                        this.board[i][j] = "X";
+                        board[i][j] = "X";
                         break;
                     case -1:
-                        this.board[i][j] = "O";
+                        board[i][j] = "O";
                         break;
                     case 0:
-                        this.board[i][j] = "";
+                        board[i][j] = "";
                         break;
                     default:
                         System.out.println("erro ao converte forw");
                     
                 }
-                
-                //System.out.println(mb.getBoard()[i][j] + " : " + i + "," + j);
             
             }
         
         }
     
+        return board;
+        
     }
     
     public void setCell(int x, int y){
         
-        this.mb.setCell(x, y, this.turn.getCurrentPlayer().getToken());
+        this.mb.setCell(x, y);
         
     }
     
@@ -90,9 +70,11 @@ public class ControllerGame {
         
     }
     
-    public void scoreBoard(){
+    public int [] getScoreBoard(){
         
-        this.sb = new int [] {p1.getWin(),p2.getWin()};
+        int [] sb = new int [] {this.p1.getWin(),this.p2.getWin()};
+        
+        return sb;
         
     }
     

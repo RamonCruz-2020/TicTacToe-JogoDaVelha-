@@ -9,13 +9,13 @@ package model;
  *
  * @author Ramon
  */
-public class ModelPlayer {
+public class Player {
     
     private int id;
     private int win;
     private int token;
 
-    public ModelPlayer(int id, int token) {
+    public Player(int id, int token) {
         this.id = id;
         this.token = token;
     }

@@ -7,6 +7,7 @@ package view;
 
 import controller.ControllerGame;
 import java.awt.Color;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -21,6 +22,8 @@ public class ViewGame extends javax.swing.JFrame {
      */
     public ViewGame() {
         initComponents();
+        ImageIcon img = new ImageIcon("C:\\Users\\Ramon\\Documents\\NetBeansProjects\\TicTacToe\\src\\imagens/tic_tac_toe-512.png");
+        this.setIconImage(img.getImage());
     }
 
     /**
@@ -33,7 +36,6 @@ public class ViewGame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        test0 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         board6 = new javax.swing.JButton();
         board8 = new javax.swing.JButton();
@@ -62,21 +64,17 @@ public class ViewGame extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setIconImages(null);
+        setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        test0.setText("test");
-        test0.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                test0ActionPerformed(evt);
-            }
-        });
-
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setOpaque(false);
 
         board6.setBackground(new java.awt.Color(255, 255, 255));
         board6.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board6.setToolTipText("");
+        board6.setBorder(null);
         board6.setBorderPainted(false);
         board6.setFocusPainted(false);
         board6.addActionListener(new java.awt.event.ActionListener() {
@@ -88,6 +86,7 @@ public class ViewGame extends javax.swing.JFrame {
         board8.setBackground(new java.awt.Color(255, 255, 255));
         board8.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board8.setToolTipText("");
+        board8.setBorder(null);
         board8.setBorderPainted(false);
         board8.setFocusPainted(false);
         board8.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +98,7 @@ public class ViewGame extends javax.swing.JFrame {
         board7.setBackground(new java.awt.Color(255, 255, 255));
         board7.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board7.setToolTipText("");
+        board7.setBorder(null);
         board7.setBorderPainted(false);
         board7.setFocusPainted(false);
         board7.addActionListener(new java.awt.event.ActionListener() {
@@ -110,6 +110,7 @@ public class ViewGame extends javax.swing.JFrame {
         board5.setBackground(new java.awt.Color(255, 255, 255));
         board5.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board5.setToolTipText("");
+        board5.setBorder(null);
         board5.setBorderPainted(false);
         board5.setFocusPainted(false);
         board5.addActionListener(new java.awt.event.ActionListener() {
@@ -121,6 +122,7 @@ public class ViewGame extends javax.swing.JFrame {
         board4.setBackground(new java.awt.Color(255, 255, 255));
         board4.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board4.setToolTipText("");
+        board4.setBorder(null);
         board4.setBorderPainted(false);
         board4.setFocusPainted(false);
         board4.addActionListener(new java.awt.event.ActionListener() {
@@ -132,6 +134,7 @@ public class ViewGame extends javax.swing.JFrame {
         board3.setBackground(new java.awt.Color(255, 255, 255));
         board3.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board3.setToolTipText("");
+        board3.setBorder(null);
         board3.setBorderPainted(false);
         board3.setFocusPainted(false);
         board3.addActionListener(new java.awt.event.ActionListener() {
@@ -143,6 +146,7 @@ public class ViewGame extends javax.swing.JFrame {
         board0.setBackground(new java.awt.Color(255, 255, 255));
         board0.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board0.setToolTipText("");
+        board0.setBorder(null);
         board0.setBorderPainted(false);
         board0.setFocusPainted(false);
         board0.addActionListener(new java.awt.event.ActionListener() {
@@ -154,6 +158,7 @@ public class ViewGame extends javax.swing.JFrame {
         board1.setBackground(new java.awt.Color(255, 255, 255));
         board1.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board1.setToolTipText("");
+        board1.setBorder(null);
         board1.setBorderPainted(false);
         board1.setFocusPainted(false);
         board1.addActionListener(new java.awt.event.ActionListener() {
@@ -165,6 +170,7 @@ public class ViewGame extends javax.swing.JFrame {
         board2.setBackground(new java.awt.Color(255, 255, 255));
         board2.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         board2.setToolTipText("");
+        board2.setBorder(null);
         board2.setBorderPainted(false);
         board2.setFocusPainted(false);
         board2.addActionListener(new java.awt.event.ActionListener() {
@@ -223,7 +229,7 @@ public class ViewGame extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Arial", 0, 100)); // NOI18N
         jLabel6.setText("O");
 
-        p1.setBackground(java.awt.Color.yellow);
+        p1.setBackground(java.awt.Color.cyan);
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel1.setText("Player");
@@ -298,71 +304,65 @@ public class ViewGame extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(113, 113, 113)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel5)))
-                .addGap(73, 73, 73)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(p2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addContainerGap(166, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(test0)
-                        .addGap(22, 22, 22))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(winP1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(58, 58, 58)
                         .addComponent(jLabel7)
-                        .addGap(45, 45, 45)
+                        .addGap(51, 51, 51)
                         .addComponent(winP2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(196, 196, 196))))
+                        .addGap(163, 163, 163))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel5)))
+                        .addGap(73, 73, 73)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(p2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6))
+                        .addGap(133, 133, 133))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(winP1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(winP2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
-                .addGap(18, 18, 18)
+                .addContainerGap(60, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(winP1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(winP2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7))
                         .addGap(18, 18, 18)
-                        .addComponent(test0))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(p2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(19, 19, 19)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6))))
-                .addContainerGap())
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addComponent(jLabel5))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel6)))))
+                .addGap(52, 52, 52))
         );
-
-        winP2.getAccessibleContext().setAccessibleName("0");
-        winP1.getAccessibleContext().setAccessibleName("0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void board1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board1ActionPerformed
@@ -370,13 +370,6 @@ public class ViewGame extends javax.swing.JFrame {
         board(0,1);
         
     }//GEN-LAST:event_board1ActionPerformed
-
-    private void test0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test0ActionPerformed
-        // TODO add your handling code here:
-   
-        
-        
-    }//GEN-LAST:event_test0ActionPerformed
 
     private void board0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_board0ActionPerformed
        
@@ -482,7 +475,6 @@ public class ViewGame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel p1;
     private javax.swing.JPanel p2;
-    private javax.swing.JButton test0;
     private javax.swing.JLabel winP1;
     private javax.swing.JLabel winP2;
     // End of variables declaration//GEN-END:variables
@@ -491,34 +483,32 @@ public class ViewGame extends javax.swing.JFrame {
 
         cg.setCell(x, y);  
         selectTurnPlayer(x, y);
-        cg.convertForward();
         
-        board0.setText(cg.getBoard()[0][0]);
-        board1.setText(cg.getBoard()[0][1]);
-        board2.setText(cg.getBoard()[0][2]);
-        board3.setText(cg.getBoard()[1][0]);
-        board4.setText(cg.getBoard()[1][1]);
-        board5.setText(cg.getBoard()[1][2]);
-        board6.setText(cg.getBoard()[2][0]);
-        board7.setText(cg.getBoard()[2][1]);
-        board8.setText(cg.getBoard()[2][2]);
+        board0.setText(cg.convertForward()[0][0]);
+        board1.setText(cg.convertForward()[0][1]);
+        board2.setText(cg.convertForward()[0][2]);
+        board3.setText(cg.convertForward()[1][0]);
+        board4.setText(cg.convertForward()[1][1]);
+        board5.setText(cg.convertForward()[1][2]);
+        board6.setText(cg.convertForward()[2][0]);
+        board7.setText(cg.convertForward()[2][1]);
+        board8.setText(cg.convertForward()[2][2]);
         
-        cg.scoreBoard();
+        winP1.setText(Integer.toString(cg.getScoreBoard()[0]));
+        winP2.setText(Integer.toString(cg.getScoreBoard()[1]));
         
-        winP1.setText(Integer.toString(cg.getSb()[0]));
-        winP2.setText(Integer.toString(cg.getSb()[1]));
     }
     
     public void selectTurnPlayer(int x, int y){
         
         if(cg.getPlayerTurn() == 1){
             
-            p1.setBackground(Color.YELLOW);
+            p1.setBackground(Color.CYAN);
             p2.setBackground(Color.WHITE);
             
         }if(cg.getPlayerTurn() == 2){
             
-            p2.setBackground(Color.YELLOW);
+            p2.setBackground(Color.CYAN);
             p1.setBackground(Color.WHITE);
             
         }
